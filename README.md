@@ -44,6 +44,21 @@ To create an AKS 'managed' cluster run the following command.  The --flavor aks 
 manged by AKS.  If the --flavor flag is not inclued a 'regular' cluster will be created.
 
 ```
-cclusterctl generate cluster capi-quickstart --flavor aks --kubernetes-version v1.23.8 --worker-machine-count=2 > azure.yaml
+clusterctl generate cluster capi-quickstart --flavor aks --kubernetes-version v1.23.8 --worker-machine-count=2 > azure.yaml
 
 ```
+
+After that command runs you can download the new cluster's kube context file.  This command will add
+the new cluster's context to your ~/.kube/config file.
+
+```
+az aks get-credentials --resource-group capi-quickstart --name capi-quickstart
+```
+##### Delete Azure Worker
+
+To delete the cluster run the following command:
+
+```
+kubectl delete cluster capi-quickstart
+```
+
