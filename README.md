@@ -69,7 +69,7 @@ To delete the cluster run the following command:
 kubectl delete cluster capi-quickstart
 ```
 
-After the AKS cluster is deleted then you can delete manifests
+After the AKS cluster is deleted then you can delete the manifests
 from the management cluster:
 
 ```
