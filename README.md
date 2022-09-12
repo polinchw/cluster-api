@@ -40,7 +40,7 @@ clusterctl init --infrastructure azure
 ```
 ##### Azure Worker
 
-To create an AKS 'managed' cluster run the following command.  The --flavor aks is critical in having the cluster
+To create an AKS 'managed' cluster run the following command.  The **--flavor aks** is **critical** in having the cluster
 manged by AKS.  If the --flavor flag is not inclued a 'regular' cluster will be created.
 
 
