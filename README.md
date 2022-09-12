@@ -8,6 +8,10 @@ This repo has some example Kubernetes cluster-api objects for creating clusters 
 
 #### Azure
 
+##### Azure Account Set Up
+
+Refer to this documentation on how to set up your Azure account to use with clusterapi.  [https://capz.sigs.k8s.io/topics/getting-started.html](https://capz.sigs.k8s.io/topics/getting-started.html)
+
 ##### Azure Provider
 
 To initialize the management cluster to work with Azure run the following.
