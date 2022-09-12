@@ -61,6 +61,16 @@ the new cluster's context to your ~/.kube/config file.
 ```
 az aks get-credentials --resource-group capi-quickstart --name capi-quickstart
 ```
+
+###### Add the Azure CNI
+
+After your kube context is pointed to the new capi-quickstart cluster you'll need to add the CNI solution:
+
+```
+kubectl --kubeconfig=./capi-quickstart.kubeconfig \
+  apply -f https://raw.githubusercontent.com/kubernetes-sigs/cluster-api-provider-azure/main/templates/addons/calico.yaml
+
+```
 ##### Delete Azure Worker
 
 To delete the cluster run the following command:
