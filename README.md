@@ -43,9 +43,16 @@ clusterctl init --infrastructure azure
 To create an AKS 'managed' cluster run the following command.  The --flavor aks is critical in having the cluster
 manged by AKS.  If the --flavor flag is not inclued a 'regular' cluster will be created.
 
+
+Create the cluster yaml:
 ```
 clusterctl generate cluster capi-quickstart --flavor aks --kubernetes-version v1.23.8 --worker-machine-count=2 > azure.yaml
 
+```
+
+Create the cluster with the cluster yaml:
+```
+kubectl apply -f azure.yaml
 ```
 
 After that command runs you can download the new cluster's kube context file.  This command will add
